@@ -11,6 +11,27 @@ OPENAI_API_KEY - Required for OpenAI LLM access
 TAVILY_API_KEY - Required for web search functionality
 EXA_API_KEY - Required for additional web search capabilities
 
+## Run single agent researcher
+Use notebook/my-docs/research.ipynb
+
+## Run multi agent researcher:
+Set up the `multi_agent/task.json` file with the task you want to research.
+
+### Output Directory Structure:
+```
+multi_agent/output/
+├── run_{timestamp}_{query}/
+│   ├── report.md
+│   ├── report.pdf (if pdf=true)
+│   └── report.docx (if docx=true)
+```
+
+(After activating the environment)
+python multi_agent/main.py
+
+Check the `multi_agent/output` folder for the research report
+
+
 ## Core Configuration Options
 You can customize the core behavior of GPTResearcher by modifying the configuration values. These can be set in three ways:
 1. Environment variables
@@ -147,10 +168,8 @@ export MAX_ITERATIONS=12
 4. Temperature: Higher = more creative, Lower = more focused
 5. Multiple Retrievers: Comma-separated list (e.g., "tavily,exa")
 
-## Run multi agent researcher:
-Set up the `multi_agent/task.json` file with the task you want to research.
 
-### Task Configuration Options:
+### Task Configuration Options (multi_agent/task.json):
 ```json
 {
   // Required fields
@@ -274,21 +293,4 @@ Set up the `multi_agent/task.json` file with the task you want to research.
    - `source_urls` (highest priority)
    - `document_urls` and `documents`
    - Web search results (if no sources specified)
-
-### Output Directory Structure:
-```
-multi_agent/output/
-├── run_{timestamp}_{query}/
-│   ├── report.md
-│   ├── report.pdf (if pdf=true)
-│   └── report.docx (if docx=true)
-```
-
-(After activating the environment)
-python multi_agent/main.py
-
-Check the `multi_agent/output` folder for the research report
-
-## Run single agent researcher
-Use notebook/my-docs/research.ipynb
 
