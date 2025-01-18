@@ -1,0 +1,31 @@
+{
+  "query": "I want to create a RAG tool that helps me write Autogen scripts. Autogen is a multi-agent framework for Python. I want to scrape the Autogen documentation (API reference, tutorials, how to guides, etc), as well as the Autogen source code, Jupyter notebooks that contain examples of how to use Autogen, and other resources. I want the system to be quick to implement, to give high quality results, and ideally to improve over time with minimal up front effort. In particular, I do not want to have to clean the data manually (although I am fine with any automated cleaning). What framework, vector database, and other tools should I use for this use case? I'm considering using LangChain, Haystack, LlamaIndex, FlashRAG, or EasyRAG for the framework. For the vector database, I'm considering using Chroma, Pinecone, Milvus, Weaviate, or Postgres with pgvector. I want to use API based LLMs (OpenAI, Anthropic, Google, etc), and I want to use a hosted vector database. Please help me choose the best tools for this task. The goal is to get a performant system running quickly and easily. Explain your recommendation, and let me know how significant the difference is between the top 3 tools. Please also give me a sense of what the most important design decisions are for this task. Which is the most important: the choice of framework, the choice of vector database, or the data I ingest?",
+  "max_sections": 3,
+  "publish_formats": {
+    "markdown": true,
+    "pdf": true,
+    "docx": true
+  },
+  "include_human_feedback": false,
+  "follow_guidelines": true,
+  "model": "gpt-4o",
+  "guidelines": [
+    "Thoroughly research Haystack, LlamaIndex, and LangChain. Read the documentation for each tool, as well as any relevant blog posts, tutorials, and examples.",
+    "Ensure you understand how each framework works, what features it offers, and how it compares to the others.",
+    "Research the top vector databases, including Chroma, Pinecone, Milvus, Weaviate, and Postgres with pgvector. Compare them to each other.",
+    "Explain the differences between Haystack, LlamaIndex, LangChain, and any other tools you recommend. How do they compare to each other? What features does each tool offer, and how do they compare to each other?",
+    "Which tools are the quickest to implement?",
+    "Which RAG features are most important for this task? Specifically, which would enable the system to give high quality results, and improve over time with minimal up front effort and very little data cleaning?",
+    "Which RAG frameworks support the necessary features for this task?",
+    "How different are the frameworks from each other? Is there a huge performance difference between them? Or am I likely to get reasonbly similar results from all of them?",
+    "Make sure you understand the tradeoffs between the tools, and the best situations to use each one.",
+    "How different are the vector databases from each other? Is there a huge performance difference between them? Or am I likely to get reasonbly similar results from all of them?",
+    "Make sure you understand the tradeoffs between the vector databases, and the best situations to use each one.",
+    "Include a section that explains the top RAG features, in particular re-ranking, and what they do, as well as what frameworks support them.",
+    "Make sure you have specifically framed this report to be useful for my specific use case: namely, creating a RAG tool that will ingest the documentation for a Python library, as well as source code and Jupyter notebooks, and then answer questions about the library in a useful way. The dataset is messy, there are many different types of information, and some of it may be irrelevant but semantically similar.",
+    "Please include a section that addresses whether the choice of framework and vector database is as important as, e.g. cleaning the data. And whether there are any techniques to automatically clean the data, or any features that are especially useful when querying unclean data..",
+    "Ensure that the report includes all necessary information to accomplish the task, including code snippets.",
+    "List any follow up questions, research topics, or areas of concern that you can think of."
+  ],
+  "verbose": true
+}

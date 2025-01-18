@@ -1,0 +1,21 @@
+{
+  "query": "How can I use LangSmith, LangChain, and LangGraph to create a prompt and tune it based on a dataset of inputs and correct outputs?",
+  "max_sections": 3,
+  "publish_formats": {
+    "markdown": true,
+    "pdf": false,
+    "docx": false
+  },
+  "include_human_feedback": false,
+  "follow_guidelines": true,
+  "model": "gpt-4o",
+  "guidelines": [
+    "Ensure that you have extensively researched the LangSmith documentation and examples, as well as other resources and how-to guides on the web.",
+    "Ensure that you have extensively researched the LangChain documentation and examples, as well as other resources and how-to guides on the web.",
+    "Ensure that you have extensively researched the LangGraph documentation and examples, as well as other resources and how-to guides on the web.",
+    "Ensure that the report includes code snippets to clearly show how to use LangSmith to perform evals on a LangGraph graph and to evaluate the performance of the prompt.",
+    "Ensure that you give a clear and specific plan for how to tune a prompt based on a dataset of inputs and correct outputs.",
+    "Ensure that you give a clear and specific plan for how to perform evaluations on a prompt as well as a LangGraph graph."
+  ],
+  "verbose": true
+}

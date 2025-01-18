@@ -1,0 +1,26 @@
+{
+  "query": "I need to get access to data stored in an EHR. The EHR provides a service where we can access .sqb files from an SFTP server. Therefore, I need to: 1. Create an EC2 instance with Microsoft SQL Server (using a licence-included AMI), 2. Install Redgate Backup Pro and activate the licence, 3. Pull the first full backup .sqb file (4.7GB) from the SFTP server and load it into the database, 4. Pull the incremental backup .sqb files on the SFTP server and ingest them sequentially, 5. Ingest new incremental backup files as needed. Please provide a step-by-step guide to accomplish this task. I am inclined to use Pulumi or Terraform to provision the EC2 instance, and Ansible to install the software and configure the database. Then either Ansible or Python to pull the files from the SFTP server and load them into the database. For context on how powerful the database needs to be, it will ingest a 250MB incremental backup file every hour, and will regularly export its data, but will not be used for any other purposes. Please research all of the components of this task, including the AWS configuration (network, security groups, etc.), the Redgate installation, and the .sqb ingestion process.",
+  "max_sections": 3,
+  "publish_formats": {
+    "markdown": true,
+    "pdf": true,
+    "docx": true
+  },
+  "include_human_feedback": false,
+  "follow_guidelines": true,
+  "model": "gpt-4o",
+  "guidelines": [
+    "Ensure that you have carefully researched how to set up a Cloud Microsoft SQL Server database on AWS EC2. Which AMI should I use?",
+    "Ensure that you have researched what AWS configurations we need to decide on for this task: VPC, subnets, security groups, etc.",
+    "Make reasonable decisions about the AWS configurations, and justify your decisions.",
+    "Research how to install Redgate Backup Pro on a Microsoft SQL Server instance on AWS EC2.",
+    "Research how to activate the Redgate licence on the Microsoft SQL Server instance on AWS EC2.",
+    "Research how to pull the first full backup .sqb file (4.7GB) from the SFTP server and load it into the database.",
+    "Research how to pull the incremental backup .sqb files on the SFTP server and ingest them sequentially.",
+    "Research how to ingest new incremental backup files as needed.",
+    "Ensure that the report includes all necessary information to accomplish the task, including code snippets.",
+    "List any follow up questions, research topics, or areas of concern that you can think of.",
+    "Create a clear plan of action to accomplish the task."
+  ],
+  "verbose": true
+}

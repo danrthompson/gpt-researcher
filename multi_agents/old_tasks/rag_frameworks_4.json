@@ -1,0 +1,27 @@
+{
+  "query": "I am making a RAG tool. My use case is to ingest info about a Python library to make a chatbot that can help me while writing code. It will ingest the documentation (tutoials, how to guides, etc), as well as the source code, and Jupyter notebooks that contain examples of how to use the library. I am trying to decide what framework to use for the RAG system. My default choice is to use LangChain, as I am very familiar with it. Are there any alternative RAG frameworks that I should consider? That have better features? That are significantly faster to implement? In particular, please consider Haystack and LlamaIndex.",
+  "max_sections": 3,
+  "publish_formats": {
+    "markdown": true,
+    "pdf": true,
+    "docx": true
+  },
+  "include_human_feedback": false,
+  "follow_guidelines": true,
+  "model": "gpt-4o",
+  "guidelines": [
+    "Thoroughly research Haystack, LlamaIndex, and LangChain. Read the documentation for each tool, as well as any relevant blog posts, tutorials, and examples.",
+    "Ensure you understand how each framework works, what features it offers, and how it compares to the others.",
+    "Explain the differences between Haystack, LlamaIndex, and LangChain. How do they compare to each other? What features does each tool offer, and how do they compare to each other?",
+    "Which tools are the quickest to implement?",
+    "Which RAG features are most important for this task? Specifically, which would enable the system to give high quality results, and improve over time with minimal up front effort and very little data cleaning?",
+    "Which RAG frameworks support the necessary features for this task?",
+    "How different are the frameworks from each other? Is there a huge performance difference between them? Or am I likely to get reasonbly similar results from all of them?",
+    "Make sure you understand the tradeoffs between the tools, and the best situations to use each one.",
+    "Include a section that explains the top RAG features, in particular re-ranking, and what they do, as well as what frameworks support them.",
+    "Make sure you have specifically framed this report to be useful for my specific use case: namely, creating a RAG tool that will ingest the documentation for a Python library, as well as source code and Jupyter notebooks, and then answer questions about the library in a useful way. The dataset is messy, there are many different types of information, and some of it may be irrelevant but semantically similar.",
+    "Ensure that the report includes all necessary information to accomplish the task, including code snippets.",
+    "List any follow up questions, research topics, or areas of concern that you can think of."
+  ],
+  "verbose": true
+}

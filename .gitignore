@@ -1,3 +1,7 @@
+# User added
+.history/
+
+
 #Ignore env containing secrets
 .env
 .venv

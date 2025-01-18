@@ -1,0 +1,22 @@
+{
+  "query": "I want to create a RAG tool that can ingest the documentation for a Python library, as well as source code and Jupyter notebooks. I am a developer, but I also want to do this quickly. What is the best RAG tool for this task? I am considering using Haystack, LlamaIndex, or LangChain. Please start by identifying if there are any other RAG frameworks that I should consider. Then, please research each framework, and explain what role it plays in a RAG toolchain. How do they compare to each other? What features does each framework offer, and how do they compare to each other? Then, please explain the pros and cons of each framework, and provide a recommendation. Finally, please show what an implementation would look like for each of the top 3 frameworks.",
+  "max_sections": 3,
+  "publish_formats": {
+    "markdown": true,
+    "pdf": true,
+    "docx": true
+  },
+  "include_human_feedback": false,
+  "follow_guidelines": true,
+  "model": "gpt-4o",
+  "guidelines": [
+    "Thoroughly research Haystack, LlamaIndex, and LangChain. Read the documentation for each tool, as well as any relevant blog posts, tutorials, and examples.",
+    "Research the top vector databases, and compare them to Postgres with pgvector.",
+    "Research the main alternative tools that I should consider. Alternatives to Haystack, LlamaIndex, and LangChain, as well as alternatives to pgvector for vector databases.",
+    "Explain the differences between Haystack, LlamaIndex, LangChain, and any other tools you recommend. How do they compare to each other? What features does each tool offer, and how do they compare to each other?",
+    "Explain the pros and cons of each tool, and provide a recommendation.",
+    "Ensure that the report includes all necessary information to accomplish the task, including code snippets.",
+    "List any follow up questions, research topics, or areas of concern that you can think of."
+  ],
+  "verbose": true
+}
