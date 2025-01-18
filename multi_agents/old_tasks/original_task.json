@@ -5,8 +5,6 @@
     "Each sub section MUST include supporting sources using hyperlinks. If none exist, erase the sub section or rewrite it to be a part of the previous section",
     "The report MUST be written in spanish"
   ],
-  "gpt_researcher_params": {
-  },
   "max_sections": 3,
   "include_human_feedback": false,
   "model": "gpt-4o",

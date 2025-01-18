@@ -4,17 +4,38 @@ from .utils.views import print_agent_output
 
 
 class ResearchAgent:
-    def __init__(self, websocket=None, stream_output=None, tone=None, headers=None):
+    def __init__(self, websocket=None, stream_output=None, tone=None, headers=None, task=None):
         self.websocket = websocket
         self.stream_output = stream_output
         self.headers = headers or {}
         self.tone = tone
+        self.task = task
 
     async def research(self, query: str, research_report: str = "research_report",
                        parent_query: str = "", verbose=True, source="web", tone=None, headers=None):
+        # Get GPTResearcher params from task if they exist
+        researcher_params = {}
+        if self.task and "gpt_researcher_params" in self.task:
+            researcher_params = self.task["gpt_researcher_params"]
+
+        # Initialize the researcher with base params
+        base_params = {
+            "query": query,
+            "report_type": research_report,
+            "parent_query": parent_query,
+            "verbose": verbose,
+            "report_source": source,
+            "tone": tone,
+            "websocket": self.websocket,
+            "headers": self.headers,
+        }
+
+        # Update with any additional params from task.json
+        base_params.update(researcher_params)
+
         # Initialize the researcher
-        researcher = GPTResearcher(query=query, report_type=research_report, parent_query=parent_query,
-                                   verbose=verbose, report_source=source, tone=tone, websocket=self.websocket, headers=self.headers)
+        researcher = GPTResearcher(**base_params)
+
         # Conduct research on the given query
         await researcher.conduct_research()
         # Write the report
