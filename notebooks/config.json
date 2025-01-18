@@ -1,0 +1,16 @@
+{
+    "retriever": "tavily",
+    "retrievers": ["tavily", "exa"],
+    "smart_llm": "openai:gpt-4o",
+    "strategic_llm": "openai:o1-preview",
+    "fast_token_limit": 2000,
+    "smart_token_limit": 4000,
+    "browse_chunk_max_length": 8192,
+    "summary_token_limit": 1000,
+    "temperature": 0.4,
+    "llm_temperature": 0.55,
+    "max_search_results_per_query": 20,
+    "total_words": 2000,
+    "max_iterations": 5,
+    "max_subtopics": 8
+}

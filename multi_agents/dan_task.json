@@ -1,0 +1,22 @@
+{
+  "query": "We are seeking a fully white-box memory solution for an LLM-based agent, compatible with LangGraph, that allows the LLM to autonomously read, rewrite, and reorganize stored data (like a NoSQL DB). It should:\n\n• Provide open-ended CRUD operations under direct LLM control.\n• Let the LLM see and manage all stored data.\n• Optionally support RAG/semantic retrieval.\n\nWe suspect mem0, Zep, or MemoryScope might not all be fully white-box, but we want detailed confirmation and any workarounds. Letta is known to have a white-box model but is not well-suited for use within a custom LangChain / LangGraph implementation - agents must run in their cloud closed source environment. Please research whether mem0, Zep, MemoryScope, or any emerging/lesser-known alternatives offer:\n\n1. White-box memory (LLM sees everything).\n2. Flexible data manipulation (create, update, delete any memory content).\n3. Minimal developer overhead.\n4. Transparent, developer-friendly integration (preferably open source) that can align with or embed into a LangChain / LangGraph implementation.\n\nFor each option:\n• Summarize the memory approach.\n• Detail how an LLM can reorganize or rewrite data.\n• Explain maturity and ease of setup.\n• State known constraints or black-box areas.\n• Provide code/usage snippets if available.\n• Compare to a custom approach implemented using a Python dictionary serialized into JSON with custom written tools for updates and retrieval.\n\nFinally, highlight any promising solutions and confirm if a custom approach remains best if none fully meets the criteria.",
+  "max_sections": 8,
+  "publish_formats": {
+    "markdown": true,
+    "pdf": true,
+    "docx": true
+  },
+  "include_human_feedback": false,
+  "follow_guidelines": true,
+  "model": "gpt-4o",
+  "guidelines": [
+    "Be concise yet thorough.",
+    "Confirm whether or not each option is compatible with a LangChain / LangGraph implementation. It does not need to specifically support LangGraph, it just needs to be able to run in a custom Python environment.",
+    "Evaluate mem0, Zep, and MemoryScope in detail. Check for white-box memory features or possible configuration to achieve them. It is ok if they have black-box features, as long as they could be used to achieve white-box memory.",
+    "Cover new or lesser-known tools with doc-based or NoSQL-like memory approaches if any are found.",
+    "For solutions lacking the required features, briefly explain why they do not meet our goals.",
+    "If no solution meets the criteria, confirm that a custom approach is still the best option.",
+    "If possible, provide references (docs, GitHub links). If not found, mention that and proceed with any available info."
+  ],
+  "verbose": true
+}

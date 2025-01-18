@@ -18,6 +18,7 @@ class TavilySearch():
         Args:
             query:
         """
+        print(f"TavilySearch initialized with query: {query}")
         self.query = query
         self.headers = headers or {}
         self.topic = topic
@@ -78,6 +79,7 @@ class TavilySearch():
             data), headers=self.headers, timeout=100)
 
         if response.status_code == 200:
+            print(f"Tavily API search successful. Query: {self.query}")
             return response.json()
         else:
             # Raises a HTTPError if the HTTP request returned an unsuccessful status code
@@ -92,7 +94,7 @@ class TavilySearch():
         try:
             # Search the query
             results = self._search(
-                self.query, search_depth="basic", max_results=max_results, topic=self.topic)
+                self.query, search_depth="advanced", max_results=max_results, topic=self.topic)
             sources = results.get("results", [])
             if not sources:
                 raise Exception("No results found with Tavily API search.")
@@ -101,6 +103,6 @@ class TavilySearch():
                                 "body": obj["content"]} for obj in sources]
         except Exception as e:
             print(
-                f"Error: {e}. Failed fetching sources. Resulting in empty response.")
+                f"Error: {e}. Failed fetching sources. Resulting in empty response. Query: {self.query}")
             search_response = []
         return search_response
